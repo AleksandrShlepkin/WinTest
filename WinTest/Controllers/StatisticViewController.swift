@@ -8,16 +8,20 @@
 import UIKit
 
 class StatisticViewController: UIViewController {
-
-    @IBOutlet weak var ResultLabel: UILabel!
-    @IBOutlet weak var SquatsTextField: UITextField!
-    @IBOutlet weak var DistansTextField: UITextField!
     
-    @IBOutlet weak var sumOutlet: UILabel!
-    @IBOutlet weak var resultOutlet: UIButton!
-    @IBAction func ResultButton(_ sender: Any) {
+    
+    
+    @IBOutlet weak var distansTextField: UITextField!
+    @IBOutlet weak var squatansTextField: UITextField!
+    @IBOutlet weak var shootLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    @IBOutlet weak var resultButtonOutlet: UIButton!
+    @IBAction func resultButtonAction(_ sender: Any) {
         getResult()
+
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 setupUI()
@@ -25,24 +29,23 @@ setupUI()
     }
     
     func setupUI() {
-        resultOutlet.layer.cornerRadius = 12
-        SquatsTextField.layer.borderColor = UIColor.white.cgColor
-        SquatsTextField.layer.borderWidth = 2
-        SquatsTextField.backgroundColor = .clear
+        resultButtonOutlet.layer.cornerRadius = 12
+        squatansTextField.layer.borderColor = UIColor.white.cgColor
+        squatansTextField.layer.borderWidth = 2
+        squatansTextField.backgroundColor = .clear
         
-        DistansTextField.layer.borderColor = UIColor.white.cgColor
-        DistansTextField.layer.borderWidth = 2
-        DistansTextField.backgroundColor = .clear
+        distansTextField.layer.borderColor = UIColor.white.cgColor
+        distansTextField.layer.borderWidth = 2
+        distansTextField.backgroundColor = .clear
         
         guard let progress = UserDefaults.standard.object(forKey: Keys.progress.rawValue) else { return }
-        ResultLabel.text = "ПРОГРЕСС:"
-        sumOutlet.text = "\(progress)Р"
+        pointsLabel.text = "\(progress)Р"
     }
     
     func getResult(){
         
-        guard let distans = DistansTextField.text else { return }
-        guard let squats = SquatsTextField.text else { return }
+        guard let distans = distansTextField.text else { return }
+        guard let squats = squatansTextField.text else { return }
         guard let weight = UserSettings.userWeight else { return }
         
         let sumDistansSquats = (Int(distans) ?? 0) + (Int(squats) ?? 0) * 10
@@ -51,7 +54,7 @@ setupUI()
         
         UserSettings.userProgress = result
         guard let progress = UserDefaults.standard.object(forKey: Keys.progress.rawValue) else { return }
-        sumOutlet.text = "\(Int(progress as! Int + result))Р"
+        pointsLabel.text = "\(Int(progress as! Int + result))Р"
     }
 
 }

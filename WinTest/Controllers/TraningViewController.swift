@@ -9,10 +9,12 @@ import UIKit
 import SDWebImage
 
 class TraningViewController: UIViewController {
-
-    @IBOutlet weak var mainText: UILabel!
+    
     @IBOutlet weak var mainImage: UIImageView!
-    @IBOutlet weak var Weeklabel: UILabel!
+    @IBOutlet weak var mainText: UILabel!
+    @IBOutlet weak var weekLabel: UILabel!
+    
+
     var array = [WeekdayModel]()
     let manager = NetworkManager()
 
@@ -81,8 +83,7 @@ class TraningViewController: UIViewController {
         let text = array.compactMap { $0.text }
         mainText.text = text.first
 
-        Weeklabel.textColor = .white
-        Weeklabel.text = getDate()
+        weekLabel.text = getDate()
     }
 
 }

@@ -18,7 +18,7 @@ class FirstViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             if self.chekUser(key: Keys.name.rawValue) == true {
-                self.performSegue(withIdentifier: "DoublSegue", sender: nil)
+                self.performSegue(withIdentifier: "DoubleSegue", sender: nil)
             } else {
                 self.performSegue(withIdentifier: "pushSecond", sender: nil)
             }

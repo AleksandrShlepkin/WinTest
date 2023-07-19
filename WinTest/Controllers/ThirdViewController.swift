@@ -9,11 +9,12 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
-    
-    @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var TraningOutlet: UIButton!
-    @IBOutlet weak var StaticOutlet: UIButton!
-    @IBOutlet weak var SettingOutlet: UIButton!
+
+    @IBOutlet weak var traningOutlet: UIButton!
+    @IBOutlet weak var analyticOutlet: UIButton!
+    @IBOutlet weak var questionOutlet: UIButton!
+    @IBOutlet weak var settingsOutlet: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +23,21 @@ class ThirdViewController: UIViewController {
     
     
     private func setupUI() {
-        TraningOutlet.layer.cornerRadius = 12
-        TraningOutlet.backgroundColor?.withAlphaComponent(0.5)
+        traningOutlet.layer.cornerRadius = 12
+        traningOutlet.backgroundColor?.withAlphaComponent(0.5)
         
-        StaticOutlet.layer.cornerRadius = 12
-        StaticOutlet.backgroundColor?.withAlphaComponent(0.5)
+        analyticOutlet.layer.cornerRadius = 12
+        analyticOutlet.backgroundColor?.withAlphaComponent(0.5)
         
-        SettingOutlet.layer.cornerRadius = 12
-        SettingOutlet.backgroundColor?.withAlphaComponent(0.5)
+        questionOutlet.layer.cornerRadius = 12
+        questionOutlet.backgroundColor?.withAlphaComponent(0.5)
+        
+        settingsOutlet.layer.cornerRadius = 12
+        settingsOutlet.backgroundColor?.withAlphaComponent(0.5)
         
         guard let progress = UserDefaults.standard.object(forKey: Keys.progress.rawValue) else { return }
         
-        progressLabel.text = "\(progress)"
+        countLabel.text = "\(progress)"
         updateViewConstraints()
     }
     

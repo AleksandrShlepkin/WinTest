@@ -9,21 +9,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var startOutlet: UIButton!
-    @IBAction func startButton(_ sender: Any) {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var growthTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var startButtonOutlet: UIButton!
+    
+    @IBAction func startButtonAction(_ sender: Any) {
         
-        if nameTextField.hasText, growthTextField.hasText, weight.hasText {
+        if nameTextField.hasText, growthTextField.hasText, weightTextField.hasText {
             print(chekUser(key: Keys.name.rawValue))
             saveUser()
-            performSegue(withIdentifier: "ThirdScreen", sender: nil)
+            performSegue(withIdentifier: "mainScreen", sender: nil)
         } else {
             print("Error")
         }
-
     }
-    @IBOutlet weak var weight: UITextField!
-    @IBOutlet weak var growthTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class SecondViewController: UIViewController {
     private func saveUser(){
         guard let name = nameTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
         guard let growth = growthTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
-        guard let weight = weight.text?.trimmingCharacters(in: .whitespaces) else { return }
+        guard let weight = weightTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
         
         UserSettings.userName = name
         UserSettings.userGrowth = growth
@@ -56,13 +57,13 @@ class SecondViewController: UIViewController {
         growthTextField.placeholder = "Рост"
         growthTextField.backgroundColor = .clear
         
-        weight.layer.borderColor = UIColor.white.cgColor
-        weight.layer.borderWidth = 3
-        weight.layer.cornerRadius = 12
-        weight.placeholder = "Вес"
-        weight.backgroundColor = .clear
+        weightTextField.layer.borderColor = UIColor.white.cgColor
+        weightTextField.layer.borderWidth = 3
+        weightTextField.layer.cornerRadius = 12
+        weightTextField.placeholder = "Вес"
+        weightTextField.backgroundColor = .clear
         
-        startOutlet.layer.cornerRadius = 16
+        startButtonOutlet.layer.cornerRadius = 16
     }
     
     

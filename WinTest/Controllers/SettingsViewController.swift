@@ -8,13 +8,12 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    @IBOutlet weak var removeData: UIButton!
     
-    @IBAction func removeButton(_ sender: Any) {
-        
+    @IBAction func removeDataButton(_ sender: Any) {
         removeDataTaped()
+
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,7 @@ class SettingsViewController: UIViewController {
         let progress = Keys.progress.rawValue
         UserDefaults.standard.removeObject(forKey: key)
         UserDefaults.standard.removeObject(forKey: progress)
-        performSegue(withIdentifier: "removeSegue", sender: nil)
+        performSegue(withIdentifier: "goBack", sender: nil)
     }
     
 
