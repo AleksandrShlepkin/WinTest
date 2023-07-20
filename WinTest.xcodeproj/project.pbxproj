@@ -27,7 +27,35 @@
 		047CF7652A6841E700F1B93F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 047CF7642A6841E700F1B93F /* SDWebImage */; };
 		047CF7672A6841E800F1B93F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 047CF7662A6841E800F1B93F /* SDWebImageMapKit */; };
 		047CF76A2A68422400F1B93F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 047CF7692A68422400F1B93F /* Alamofire */; };
+		047CF7732A68831000F1B93F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF7722A68831000F1B93F /* NotificationService.swift */; };
+		047CF7772A68831000F1B93F /* test_oneSignal_notification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 047CF7702A68830F00F1B93F /* test_oneSignal_notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		047CF77E2A6883D900F1B93F /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 047CF77D2A6883D900F1B93F /* OneSignal */; };
+		047CF7802A6883D900F1B93F /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 047CF77F2A6883D900F1B93F /* OneSignalExtension */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		047CF7752A68831000F1B93F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 047CF7252A682C4000F1B93F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047CF76F2A68830F00F1B93F;
+			remoteInfo = test_oneSignal_notification;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		047CF77B2A68831100F1B93F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				047CF7772A68831000F1B93F /* test_oneSignal_notification.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		047CF72D2A682C4000F1B93F /* WinTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +77,11 @@
 		047CF75C2A682D1A00F1B93F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		047CF75D2A682D1A00F1B93F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		047CF7612A682D2D00F1B93F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		047CF76B2A687FB000F1B93F /* WinTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WinTest.entitlements; sourceTree = "<group>"; };
+		047CF7702A68830F00F1B93F /* test_oneSignal_notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = test_oneSignal_notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		047CF7722A68831000F1B93F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		047CF7742A68831000F1B93F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047CF7812A6885CB00F1B93F /* test_oneSignal_notification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = test_oneSignal_notification.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +89,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047CF7802A6883D900F1B93F /* OneSignalExtension in Frameworks */,
 				047CF76A2A68422400F1B93F /* Alamofire in Frameworks */,
+				047CF77E2A6883D900F1B93F /* OneSignal in Frameworks */,
 				047CF7672A6841E800F1B93F /* SDWebImageMapKit in Frameworks */,
 				047CF7652A6841E700F1B93F /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047CF76D2A68830F00F1B93F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				047CF72F2A682C4000F1B93F /* WinTest */,
+				047CF7712A68831000F1B93F /* test_oneSignal_notification */,
 				047CF72E2A682C4000F1B93F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				047CF72D2A682C4000F1B93F /* WinTest.app */,
+				047CF7702A68830F00F1B93F /* test_oneSignal_notification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +128,7 @@
 		047CF72F2A682C4000F1B93F /* WinTest */ = {
 			isa = PBXGroup;
 			children = (
+				047CF76B2A687FB000F1B93F /* WinTest.entitlements */,
 				047CF7602A682D1E00F1B93F /* Timer */,
 				047CF75B2A682D0100F1B93F /* NetworkService */,
 				047CF7562A682CE700F1B93F /* User */,
@@ -138,6 +183,16 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		047CF7712A68831000F1B93F /* test_oneSignal_notification */ = {
+			isa = PBXGroup;
+			children = (
+				047CF7812A6885CB00F1B93F /* test_oneSignal_notification.entitlements */,
+				047CF7722A68831000F1B93F /* NotificationService.swift */,
+				047CF7742A68831000F1B93F /* Info.plist */,
+			);
+			path = test_oneSignal_notification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,20 +203,41 @@
 				047CF7292A682C4000F1B93F /* Sources */,
 				047CF72A2A682C4000F1B93F /* Frameworks */,
 				047CF72B2A682C4000F1B93F /* Resources */,
+				047CF77B2A68831100F1B93F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				047CF7762A68831000F1B93F /* PBXTargetDependency */,
 			);
 			name = WinTest;
 			packageProductDependencies = (
 				047CF7642A6841E700F1B93F /* SDWebImage */,
 				047CF7662A6841E800F1B93F /* SDWebImageMapKit */,
 				047CF7692A68422400F1B93F /* Alamofire */,
+				047CF77D2A6883D900F1B93F /* OneSignal */,
+				047CF77F2A6883D900F1B93F /* OneSignalExtension */,
 			);
 			productName = WinTest;
 			productReference = 047CF72D2A682C4000F1B93F /* WinTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		047CF76F2A68830F00F1B93F /* test_oneSignal_notification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047CF7782A68831100F1B93F /* Build configuration list for PBXNativeTarget "test_oneSignal_notification" */;
+			buildPhases = (
+				047CF76C2A68830F00F1B93F /* Sources */,
+				047CF76D2A68830F00F1B93F /* Frameworks */,
+				047CF76E2A68830F00F1B93F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test_oneSignal_notification;
+			productName = test_oneSignal_notification;
+			productReference = 047CF7702A68830F00F1B93F /* test_oneSignal_notification.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,6 +250,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					047CF72C2A682C4000F1B93F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					047CF76F2A68830F00F1B93F = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -190,12 +269,14 @@
 			packageReferences = (
 				047CF7632A6841E700F1B93F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				047CF7682A68422400F1B93F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				047CF77C2A6883D800F1B93F /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			productRefGroup = 047CF72E2A682C4000F1B93F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				047CF72C2A682C4000F1B93F /* WinTest */,
+				047CF76F2A68830F00F1B93F /* test_oneSignal_notification */,
 			);
 		};
 /* End PBXProject section */
@@ -208,6 +289,13 @@
 				047CF73D2A682C4300F1B93F /* LaunchScreen.storyboard in Resources */,
 				047CF73A2A682C4300F1B93F /* Assets.xcassets in Resources */,
 				047CF7382A682C4000F1B93F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047CF76E2A68830F00F1B93F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +323,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		047CF76C2A68830F00F1B93F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047CF7732A68831000F1B93F /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		047CF7762A68831000F1B93F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047CF76F2A68830F00F1B93F /* test_oneSignal_notification */;
+			targetProxy = 047CF7752A68831000F1B93F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		047CF7362A682C4000F1B93F /* Main.storyboard */ = {
@@ -374,11 +478,13 @@
 		047CF7422A682C4300F1B93F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = WinTest/WinTest.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 779ZY47A99;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WinTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -393,20 +499,26 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AleksandrKorotkov.WinTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		047CF7432A682C4300F1B93F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = WinTest/WinTest.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 779ZY47A99;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WinTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -421,6 +533,62 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AleksandrKorotkov.WinTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		047CF7792A68831100F1B93F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = test_oneSignal_notification/test_oneSignal_notification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 779ZY47A99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = test_oneSignal_notification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = test_oneSignal_notification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AleksandrKorotkov.WinTest.test-oneSignal-notification";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		047CF77A2A68831100F1B93F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = test_oneSignal_notification/test_oneSignal_notification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 779ZY47A99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = test_oneSignal_notification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = test_oneSignal_notification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AleksandrKorotkov.WinTest.test-oneSignal-notification";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,6 +616,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		047CF7782A68831100F1B93F /* Build configuration list for PBXNativeTarget "test_oneSignal_notification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047CF7792A68831100F1B93F /* Debug */,
+				047CF77A2A68831100F1B93F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -467,6 +644,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		047CF77C2A6883D800F1B93F /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -484,6 +669,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 047CF7682A68422400F1B93F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		047CF77D2A6883D900F1B93F /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 047CF77C2A6883D800F1B93F /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+		047CF77F2A6883D900F1B93F /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 047CF77C2A6883D800F1B93F /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
